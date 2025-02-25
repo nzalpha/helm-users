@@ -5,6 +5,6 @@ nameSpace: stg-aadil-ns
 replicas: 
   default: 1
 image:
-  name: aadil08/users
+  name: aadil08/user
   tag: random
 targetPort: 8232
