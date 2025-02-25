@@ -1,0 +1,33 @@
+# Manifest file for user Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-prod
+  template:
+    metadata:
+      labels:
+        app: user-prod
+    spec:
+      containers:
+      - name: user-prod
+        image: DIT
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-prod-svc
+spec:
+  selector:
+    app: user-prod
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8232
