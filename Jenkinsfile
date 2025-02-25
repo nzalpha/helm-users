@@ -1,4 +1,4 @@
 @Library("com.smartapp.slb@main") _
-    dockerPipeline(appName: 'user') 
+    helmPipeline(appName: 'users') 
         
     

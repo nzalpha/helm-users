@@ -5,13 +5,13 @@
 
 # Values can be passed at the application level, I am passing at application because data changes based on MS
 
-appName: eureka-dev
-depName: eureka-dev-dep
-svcName: eureka-dev-svc
+appName: users-dev
+depName: users-dev-dep
+svcName: users-dev-svc
 nameSpace: dev-aadil-ns
 replicas: 
   default: 1
 image:
-  name: aadil08/eureka
+  name: aadil08/users
   tag: random
-targetPort: 8761
+targetPort: 8232
